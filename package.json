@@ -1,0 +1,72 @@
+{
+  "name": "vanessashortcuts",
+  "displayName": "Vanessa Shortcuts",
+  "description": "Use shortcuts and snippets to develop new tests in Vanessa",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kakoytochelik/VanessaShortcuts.git"
+  },
+  "categories": [
+    "Other"
+  ],  
+  "activationEvents": [
+    "onCommand:vanessashortcuts.complexSnippet",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "vanessashortcuts.complexSnippet",
+      "title": "Vanessa Shortcuts"
+    }],
+    "keybindings": [{
+      "command": "vanessashortcuts.complexSnippet",
+      "key": "tab",
+      "mac": "tab",
+      "when": "editorTextFocus && !suggestWidgetVisible"
+    }],
+    "files": [
+        "src/",
+        "snippets/"
+    ],
+    "configuration": {
+      "title": "Vanessa Shortcuts",
+      "properties": {
+        "vanessashortcuts.snippetsPath": {
+          "type": "string",
+          "default": "C:/Git/1cDrive/tools/VanessaShortcuts/snippets/snippets.json",
+          "description": "Path to the file for string replacement (.json)"
+        },
+        "vanessashortcuts.autocompletePath": {
+          "type": "string",
+          "default": "C:/Git/1cDrive/tools/VanessaShortcuts/snippets/VA_Snippets.code-snippets",
+          "description": "Path to the file for string autocompletion (.code-snippets)"
+        }
+      }
+    }
+  
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8"
+  }
+}
