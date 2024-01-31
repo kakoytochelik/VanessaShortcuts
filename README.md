@@ -16,12 +16,18 @@ You can use `>` or `;` between shortcuts or write them on separate lines.
 <br />You can specify parameters in the shortcut.
 
 #### For example:<br />
-`supInvCreate() > supInvFillHeader(Best computers, HP fans) > supInvAddGoods(2) > postDoc() ; close()`
+```
+supInvCreate() > supInvFillHeader(Best computers, HP fans) > supInvAddGoods(2) > postDoc() ; close()
+```
 <br />
 <br />Or<br /><br />
-<code>
-supInvCreate()<br />supInvFillHeader(Best computers, HP fans) > supInvAddGoods(2)<br />postDoc()<br />close()
-</code>
+
+````
+supInvCreate()
+supInvFillHeader(Best computers, HP fans) > supInvAddGoods(2)
+postDoc()
+close()
+````
 <br />
 <br />
 
