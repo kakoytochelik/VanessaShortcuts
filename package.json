@@ -2,7 +2,12 @@
   "name": "vanessashortcuts",
   "displayName": "Vanessa Shortcuts",
   "description": "Use shortcuts and snippets to develop new tests in Vanessa",
-  "version": "0.0.1",
+  "publisher": "kakoytochelik",
+  "author": {
+    "name": "Alexey Eremeev"
+  },
+  "icon": "images/icon.png",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.85.0"
   },
