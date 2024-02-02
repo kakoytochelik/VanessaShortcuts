@@ -62,7 +62,7 @@ function activate(context) {
             }
             editor.selections.forEach(selection => {
                 const currentLine = editor.document.lineAt(selection.start.line).text;
-                if (!currentLine.match(/^[a-zA-Z]+\([^\)]*\)\s*(\s;\s|;|\s>\s|>|\n|\s\n|$)/)) {
+                if (!currentLine.match(/^\s*[a-zA-Z]+\([^\)]*\)\s*(\s;\s|;|\s>\s|>|\n|\s\n|$)/)) {
                     if (editor.document.getWordRangeAtPosition(selection.active) && vscode.window.activeTextEditor?.selection.isEmpty) {
                         vscode.commands.executeCommand('editor.action.triggerSuggest');
                     }

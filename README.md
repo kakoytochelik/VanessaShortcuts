@@ -47,5 +47,3 @@ In `Settings > Extensions > Vanessa Shortcuts` you should specify paths to the s
 
 1. Autocomplete Path - a file with shortcuts to provide autocomplete suggestions
 2. Snippets Path - a file with code snippets to replace shortcuts with actual scenarios
-
-These files are located in the repository in the `tools\VanessaShortcuts\snippets` folder.
